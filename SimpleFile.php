@@ -52,7 +52,7 @@ class SimpleFile
      *
      * @var string|null
      */
-    public $field = null;
+    public $root = null;
 
     /**
      * Path to file filed if file field has name like `Array[path][to][filed]`.
@@ -147,7 +147,7 @@ class SimpleFile
                 continue;
             }
 
-            $file->field = $name;
+            $file->root = $name;
         }
 
         return $result;
@@ -162,7 +162,7 @@ class SimpleFile
         $file->size = $element['size'];
         $file->tmpName = $element['tmp_name'];
         $file->error = $element['error'];
-        $file->field = $name;
+        $file->root = $name;
 
         return $file;
     }
