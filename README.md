@@ -11,5 +11,5 @@ echo $files[0]->name;
 ```
 Except `$_FILES` fields, SimpleFile object contains two extra fields: `path`
 and `root`.
-* `root` contains `$_FILES` root element name. E.g. in `<input type="file" name="first">` `field` will contain `first`, and in `<input type="file" name="FormName[first][second]">` it will be `FormName`.
+* `root` contains `$_FILES` root element name. E.g. in `<input type="file" name="first">` `root` will contain `first`, and in `<input type="file" name="FormName[first][second]">` it will be `FormName`.
 * `path` contains `$_FILES` nested keys that defines path to data. E.g. in `<input type="file" name="FormName[first][second]">` `path` will be the next array: `['first', 'second']`
