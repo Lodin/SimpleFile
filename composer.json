@@ -1,0 +1,23 @@
+{
+    "name": "lodin/simple-file",
+    "description": "Parses $_FILES array to objects list",
+    "type": "library",
+    "license": "BSL-1.0",
+    "keywords": ["file"],
+    "homepage": "https://github.com/Lodin/SimpleFile",
+    "authors": [
+        {
+            "name": "Vlad Rindevich",
+            "email": "rindevich.vs@gmail.com",
+            "homepage": "https://github.com/Lodin"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Lodin/SimpleFile/issues",
+        "source": "https://github.com/Lodin/SimpleFile"
+    },
+    "require": {
+        "php":">=5.3.0"
+    },
+    "minimum-stability": "dev"
+}
