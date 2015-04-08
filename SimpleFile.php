@@ -66,12 +66,12 @@ class SimpleFile
      * Disassembles $_FILES array to SimpleFile objects.
      *
      * @param array $files            $_FILES array
-     * @param bool  $removeEmptyFiles defines need to remove files with empty
-     *                                `name` fields
+     * @param bool  $removeEmptyFiles defines the need to remove files with 
+     *                                empty `name` fields
      *
      * @return array list of SimpleFile objects.
      *
-     * @throws FileTransferException if $_FILES is empty
+     * @throws LogicException if $_FILES is empty
      */
     public static function disassemble(array $files, $removeEmptyFiles = false)
     {
