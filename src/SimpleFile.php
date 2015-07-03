@@ -98,11 +98,11 @@ class SimpleFile
     {
         $result = array();
 
-        function createFiles($array, &$filelist, &$path)
+        function createFiles($array, &$filelist, &$path, $class)
         {
             foreach ($array as $pathPart => $element) {
                 if (!is_array($element)) {
-                    $file = new SimpleFile();
+                    $file = new $class();
                     $file->path = $path;
                     $file->path[] = $pathPart;
 
@@ -114,7 +114,7 @@ class SimpleFile
                 if (is_array($element)) {
                     $pathNew = $path;
                     $pathNew[] = $pathPart;
-                    createFiles($element, $filelist, $pathNew);
+                    createFiles($element, $filelist, $pathNew, $class);
                 }
             }
         }
@@ -133,7 +133,7 @@ class SimpleFile
         }
 
         $path = array();
-        createFiles($element['name'], $result, $path);
+        createFiles($element['name'], $result, $path, get_called_class());
 
         foreach ($element as $field => $data) {
             foreach ($result as &$file) {
